@@ -20,31 +20,7 @@ ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
     CHROME_PATH=/usr/bin/chromium-browser
 
 USER node
-
 WORKDIR /home/node
 
 # Garantir que o Puppeteer encontre o Chromium
 RUN mkdir -p /home/node/.cache/puppeteer
-```
-
-2. **No EasyPanel:**
-   - Vá em **Services** → **Create Service**
-   - Escolha **GitHub** como source
-   - Conecte seu repositório
-   - O EasyPanel vai buildar automaticamente
-
----
-
-### **Opção 2: Build local e push para registry**
-
-Se preferir, posso te mostrar como fazer o build localmente e usar no EasyPanel.
-
----
-
-### **Opção 3: Solução temporária - Instalar via terminal**
-
-Se precisar de uma solução **imediata**:
-
-1. **Use a imagem normal:**
-```
-   n8nio/n8n:1.121.3
